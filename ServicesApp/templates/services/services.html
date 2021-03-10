@@ -1,0 +1,28 @@
+{% extends "WebProjectApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+  {% for service in services %}
+<!--         var        view        -->
+
+    <section class="page-section clearfix">
+      <div class="container">
+        <div class="intro">
+          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{service.image.url}}" alt="" 
+          style="float: right; width: 60%; margin-left: 0px;">
+          <div class="intro-text left-0 text-center bg-faded p-5 rounded" 
+          style="min-width: 400px; margin-top: 17rem; width: 30%; left: 150;">
+            <h2 class="section-heading mb-4" >
+              <span class="section-heading-upper">{{service.title}}</span>
+              <span class="section-heading-upper">{{service.content}}</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {% endfor %}
+
+{% endblock %}
